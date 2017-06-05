@@ -1,10 +1,8 @@
 #!/usr/bin/python -tt
 # -*- coding: utf-8 -*-
 
-# (c) 2012, Afterburn <http://github.com/afterburn>
-# (c) 2013, Aaron Bull Schaefer <aaron@elasticdog.com>
-# (c) 2015, Indrajit Raychaudhuri <irc+code@indrajit.com>
-#
+# (c) 2017, John Burwell <https://github.com/jburwell>
+
 # This file is part of Ansible
 #
 # Ansible is free software: you can redistribute it and/or modify
@@ -25,6 +23,8 @@ ANSIBLE_METADATA = {
     'status': ['preview'],
     'supported_by': 'community'
 }
+
+from __future__ import absolute_import
 
 from ansible.modules.packaging.os.pacman import PacmanModule
 

@@ -154,7 +154,7 @@ from ansible.module_utils.basic import *
 
 
 class PacmanModule(AnsibleModule):
-    def __init__(self, module_name, bin_name=module_name):
+    def __init__(self, module_name):
         super(PacmanModule, self).__init__(
             argument_spec=dict(
                 name=dict(aliases=['pkg', 'package'], type='list'),
@@ -171,7 +171,7 @@ class PacmanModule(AnsibleModule):
             required_one_of=[['name', 'update_cache', 'upgrade']],
             supports_check_mode=True)
         self._name = module_name
-        self._bin_path = self.get_bin_path(bin_name, True)
+        self._bin_path = self.get_bin_path(module_name, True)
 
     def get_version(self, pacman_output):
         """Take pacman -Qi or pacman -Si output and get the Version"""

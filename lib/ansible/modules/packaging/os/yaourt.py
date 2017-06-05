@@ -26,7 +26,7 @@ ANSIBLE_METADATA = {
     'supported_by': 'community'
 }
 
-from pacman import PacmanModule
+from ansible.modules.packaging.os.pacman import PacmanModule
 
 
 def main():

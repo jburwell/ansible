@@ -149,6 +149,9 @@ import os
 import re
 import sys
 
+# import module snippets
+from ansible.module_utils.basic import *
+
 
 class PacmanModule(AnsibleModule):
     def __init__(self, module_name, bin_name=module_name):
@@ -491,9 +494,6 @@ def main():
     module = PacmanModule("pacman")
     module.main()
 
-
-# import module snippets
-from ansible.module_utils.basic import *
 
 if __name__ == "__main__":
     main()

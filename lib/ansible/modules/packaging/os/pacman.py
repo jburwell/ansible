@@ -181,7 +181,7 @@ class PacmanModule(AnsibleModule):
                 return line.split(':')[1].strip()
         return None
 
-    def query_package(self, pacman_path, name, state="present"):
+    def query_package(self, name, state="present"):
         """Query the package status in both the local system and the repository. Returns a boolean to indicate if the package is installed, a second
         boolean to indicate if the package is up-to-date and a third boolean to indicate whether online information were available
         """
@@ -193,12 +193,12 @@ class PacmanModule(AnsibleModule):
                 return False, False, False
 
             # get the version installed locally (if any)
-            lversion = get_version(lstdout)
+            lversion = self.get_version(lstdout)
 
             rcmd = "%s -Si %s" % (self._bin_path, name)
             rrc, rstdout, rstderr = self.run_command(rcmd, check_rc=False)
             # get the version in the repository
-            rversion = get_version(rstdout)
+            rversion = self.get_version(rstdout)
 
             if rrc == 0:
                 # Return True to indicate that the package is installed locally, and the result of the version number comparison

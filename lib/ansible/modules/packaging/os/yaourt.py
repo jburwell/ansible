@@ -17,16 +17,16 @@
 #
 # You should have received a copy of the GNU General Public License
 # along with Ansible.  If not, see <http://www.gnu.org/licenses/>.
+from __future__ import absolute_import
+
+from ansible.modules.packaging.os.pacman import PacmanModule
+
 
 ANSIBLE_METADATA = {
     'metadata_version': '1.0',
     'status': ['preview'],
     'supported_by': 'community'
 }
-
-from __future__ import absolute_import
-
-from ansible.modules.packaging.os.pacman import PacmanModule
 
 
 def main():

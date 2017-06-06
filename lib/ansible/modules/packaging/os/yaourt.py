@@ -1,7 +1,7 @@
 #!/usr/bin/python -tt
 # -*- coding: utf-8 -*-
 
-# (c) 2017, John Burwell <https://github.com/jburwell>
+# (c) 2017, John Burwell <meaux@cockamamy.net>
 
 # This file is part of Ansible
 #
@@ -17,10 +17,8 @@
 #
 # You should have received a copy of the GNU General Public License
 # along with Ansible.  If not, see <http://www.gnu.org/licenses/>.
-from __future__ import absolute_import
 
-from ansible.modules.packaging.os.pacman import PacmanModule
-
+from ansible.modules_utils.arch_linux_common import PacmanModule
 
 ANSIBLE_METADATA = {
     'metadata_version': '1.0',

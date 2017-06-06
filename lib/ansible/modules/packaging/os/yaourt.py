@@ -18,7 +18,7 @@
 # You should have received a copy of the GNU General Public License
 # along with Ansible.  If not, see <http://www.gnu.org/licenses/>.
 
-from ansible.modules_utils.arch_linux_common import PacmanModule
+from ansible.module_utils.arch_linux_common import PacmanModule
 
 ANSIBLE_METADATA = {
     'metadata_version': '1.0',
